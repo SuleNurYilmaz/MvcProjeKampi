@@ -1,0 +1,18 @@
+﻿@using EntityLayer.Concrete
+@model List<Category>
+
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h2>İstatistikler</h2>
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading"> Kategori Sayısı</div>
+    <div class="panel-body">@Model.Count</div>
+</div>
+

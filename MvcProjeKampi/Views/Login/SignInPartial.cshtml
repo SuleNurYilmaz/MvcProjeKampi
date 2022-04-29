@@ -1,0 +1,52 @@
+﻿
+<style>
+    .modal label {
+        color: black;
+    }
+    .modal input {
+        background-color: white;
+        color: black !important;
+        border: thin solid black;
+    }
+    
+    .modal input:focus {
+        background-color: white;
+        color: black !important; 
+        border:  solid black;
+
+    }
+
+</style>
+
+    <button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
+        Kayıt Ol
+    </button>
+
+    <div class="modal" id="Modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Hesap Oluştur  </h2>
+                </div>
+                <form method="post" action="/Login/AddWriter">
+                    <div class="modal-body" >
+                        <label>Yazar Adı</label>
+                        <input  type="text" name="WriterName" class="form-control"  required />
+                        <br />
+                        <label>Yazar Soyadı</label>
+                        <input type="text" name="WriterSurname" class="form-control"required />
+                        <br />
+                        <label>Yazar Maili</label>
+                        <input type="email" name="WriterMail" class="form-control" required  oninvalid="this.setCustomValidity('Geçerli bir mail adresi giriniz.')"  
+                          oninput="this.setCustomValidity('')" />
+                        <br />
+                        <label>Yazar Şifresi</label>
+                        <input type="password" name="WriterPassword" class="form-control" required/>
+                        <br />
+
+                        <button class="btn btn-info">Kayıt Ol</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

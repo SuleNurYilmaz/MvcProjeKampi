@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "SweetAlert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<br />
+<button class="btn btn-primary" id="btn1">Button1</button>
+<button class="btn btn-warning" id="btn2">Button2</button>
+<button class="btn btn-danger" id="btn3">Button3</button>
+
+<script>
+    $('#btn1').click(function () {
+        swal("Merhaba Mvc Proje Kampı");
+    });
+</script>
+<script>
+    $('#btn2').click(function () {
+        swal("Merhaba Mvc Proje Kampı", "...Ders 96!");
+    });
+</script>
+<script>
+    $('#btn3').click(function () {
+        swal("Tebrikler", "Başarılı bir şekilde eklendi!", "success").then(okay => {
+            if (okay) {
+
+                window.location.href = 'https://www.google.com/'
+            }
+        }
+        );
+
+    });
+</script>
+@*bu ne?*@
+@*<script>
+Swal.fire({
+title: 'Do you want to save the changes?',
+showCancelButton: true,
+confirmButtonText: `Save`,
+denyButtonText: `Don't save`,
+}).then((result) => {
+if (result.isConfirmed) {
+window.location = 'www.google.com';
+} else if (result.isDenied) {
+Swal.fire('Changes are not saved', '', 'info')
+}
+})
+</script>*@
